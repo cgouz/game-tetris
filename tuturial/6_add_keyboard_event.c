@@ -98,6 +98,8 @@ int main () {
                 x++;
             }
         }
+
+        y++;
         
         // Butun window'ni yuqorida tanlangan rang bilan to'ldiramiz
         SDL_RenderClear(renderer);
@@ -117,6 +119,9 @@ int main () {
 
         // Chizilgan narsani ekranga chiqaramiz
         SDL_RenderPresent(renderer);
+        
+        // Delay to limit the frame rate to approximately 60 FPS
+        SDL_Delay(16);
     }
 
     SDL_DestroyRenderer(renderer);
